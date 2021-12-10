@@ -48,4 +48,4 @@ print("Especiciaciones monitor: {0}".format(conocer_resolucion()))
 #mostrarPosicion_mouse()
 #moverPunteroMouse()
 
-darClick()
+#darClick()
