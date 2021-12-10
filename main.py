@@ -20,12 +20,24 @@ def conocer_posicion():
         fin +=1
         time.sleep(2)
         
-        if fin > 20:
+        if fin > 10:
             print("fin")
             break
+
+def mostrarPosicion_mouse():
+    #Conocer posicion del puntero y mostrar el RGB de su ubicacion
+    print(pyautogui.displayMousePosition())
+
+
+
+
+
+
 #***********************************************************************************
 os.system('cls')
 print("Especiciaciones monitor: {0}".format(conocer_resolucion()))
 
 print("")
 conocer_posicion()
+
+mostrarPosicion_mouse()
