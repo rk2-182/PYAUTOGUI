@@ -2,6 +2,8 @@ import pyautogui
 import time
 import os
 
+#https://www.youtube.com/watch?v=ThrOhLJv8lw&list=PLrMKroDxWn7JEtvM8Kvem46_u1vlBSHxY&index=1
+
 def conocer_resolucion():
     resolucion = pyautogui.size()
 
@@ -29,15 +31,21 @@ def mostrarPosicion_mouse():
     print(pyautogui.displayMousePosition())
 
 
+def moverPunteroMouse():
+    pyautogui.moveTo(0,0,duration=1)
 
-
+def darClick():
+    pyautogui.FAILSAFE = False
+    pyautogui.click(x=0,y=0,clicks=1,interval=4,button="right",duration=6)
 
 
 #***********************************************************************************
 os.system('cls')
 print("Especiciaciones monitor: {0}".format(conocer_resolucion()))
 
-print("")
-conocer_posicion()
+#print("")
+#conocer_posicion()
+#mostrarPosicion_mouse()
+#moverPunteroMouse()
 
-mostrarPosicion_mouse()
+darClick()
